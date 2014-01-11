@@ -1,0 +1,44 @@
+\documentclass[a4paper,12pt,oneside,titlepage]{article}
+\usepackage[utf8x]{inputenc}
+\usepackage[russian]{babel}
+\usepackage[OT1]{fontenc}
+\usepackage[left=2cm,right=2cm,top=2cm,bottom=2cm]{geometry}
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{amsfonts}
+\ifx\pdfoutput\undefined
+\usepackage{graphicx}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\newcommand{\grad}{\mathop{\mathrm{grad}}\nolimits}
+\else
+\usepackage[pdftex]{graphicx}
+
+
+
+
+% Title Page
+\title{Билеты по Алгебре и теории чисел 19-...\\ 3 семестр. МОиАИС.}
+\author{Якунцев Никита}
+
+\begin{document}
+\maketitle
+\tableofcontents
+
+\theoremstyle{plain}
+\newtheorem{theorem}{Теорема}
+\newtheorem{lemma}{Лемма}
+
+\theoremstyle{definition}
+\newtheorem{definition}{Определение}
+
+\renewcommand{\proofname}{
+\textbf{Доказательство: }
+}
+
+
+
+\include{./contents/19_bilet}
+
+\end{document}
