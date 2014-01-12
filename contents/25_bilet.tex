@@ -1,0 +1,119 @@
+\subsection{Билет 25}
+
+
+\textit{Наилучшее приближение. Построение элемента наилучшего приближения для конечномерного подпространства евклидова пространства.}
+
+
+\textbf{Def1:} Пусть L - подмножество метрического пр-ва E с метрикой $\rho(f,g), \ f,g \in E\ $ 
+\begin{enumerate}
+ \item Расстоянием [от] эл-та $f \in E\ $ до мн-ва L [в метрике $\rho$] называется $\underset {g \in L\ }{inf} \rho(f,g) $ \\
+       Обозначается $\rho(f,L)$
+ \item Элементы $g_o \in L\ $ называется элемент наилучшего приближения в L [для] $f \in E\ $ [в метрике $\rho$], если 
+       $\rho(f,g_0)=\rho(f,L)$, $\rho(f,g_0)$- величина наилучшего приближения
+\end{enumerate}
+\textbf{Теорема 1} \\
+Пусть L подпр-во евклидового пр-ва $E$ \\
+$\rho(f,g) = \left| \left| f-g \right| \right| = \sqrt{f-g,f-g}$ 
+\begin{enumerate}
+ \item Если существует $g_0 \in L\ $ - эл-т наилучшего приближения для $f \in E\ $, то $f-g \perp L $
+ \item Если существует эл-т $g_0 \in L\ : f-g_0 \perp L$, то $g_0$- элемент наилучшего приближения для $f$   
+ \item Если для $f \in E\ \exists g_o \in L\ $ - эл-т наилучшего приближения, то он единственный
+\end{enumerate}
+\textbf{Доказательство} \\
+\begin{enumerate}
+ \item \underline{Предположим противное} $f-g_0 \not \perp  L \Rightarrow \exists h \in L\ (f-g_0,h)=\alpha \ne 0 $ \\
+       $\left| \left| h \right| \right|=1, \ \alpha=(f-g_0,h) \ne 0 $ \\
+       \\ \\ Рисунок \\ \\
+       $\left| \left| f-g_0 \right| \right|>\left| \left| f-g_0-\alpha h \right| \right|$ ? \\
+       $\left| \left| f-g_0 \right| \right|^2>\left| \left| f-g_0-\alpha h \right| \right|^2$ \\
+       $\left| \left| f-g_0-\alpha h \right| \right|^2 = \left( (f-g_0)-\alpha h , (f-g_0)-\alpha h \right)$ = 
+       $(f-g_0,f-g_0)-2 \alpha (f-g_0,h) + \alpha^2 (h,h) = \left| \left| f-g_0 \right| \right|^2 -\alpha^2 \Rightarrow$
+       $\left| \left| f-g_0-\alpha h \right| \right|^2 = \left| \left| f-g_0 \right| \right|^2 - \underset {\ne 0}{\alpha^2} < \left| \left| f-g_0 \right| \right|^2  $ \\
+       $\left| \left| f-g_0-\alpha h \right| \right| < \left| \left| f-g_0 \right| \right|$ -величина наилучшего приближения 
+       \underline{получили противоречие}, т.к есть эл-т с меньшим приближением
+ \item $f-g_0 \perp L \Rightarrow g_0$- эл-т наилучшего приближения для $f$ ? \\
+       $\forall g \in L\ \left| \left| f-g \right| \right| \ge \left| \left| f-g_0 \right| \right| $ ? \\
+       $\left| \left| f-g \right| \right|^2 = \left| \left| (f-g_0)+(g_0-g) \right| \right|^2 = \left( (f-g_0) + (g_0-g), (f-g_0)+(g_0-g) \right) = $\\
+       $(f-g_0,f-g_0)+2 \underset{=0}{(f-g_0,g-g_0)} + (g_0-g,g_0-g) (*)$ \\
+       $f-g_0 \perp L \Leftrightarrow (f-g_0,h)=0, \ \forall h \in L\ $ при $h=g \in L\ , \ (f-g_0,g)=0$ \\
+       при $h=g_0 \in L\ (f-g_0,g_0)=0 \Rightarrow (f-g_0,g-g_0)=0$ \\
+       $(*) = \left| \left| f-g_0 \right| \right|^2 + \left| \left| g-g_0 \right| \right|^2 \Rightarrow$ \\
+       $\left| \left| f-g \right| \right|^2 = \left| \left| f-g_0 \right| \right|^2 + \left| \left| g-g_0 \right| \right| \Rightarrow $ \\
+       $\left| \left| f-g \right| \right|^2 \ge \left| \left| f-g_0 \right| \right|^2 \Rightarrow $
+       $\left| \left| f-g \right| \right| \ge \left| \left| f-g_0 \right| \right| , \ \forall g \in L\ \Rightarrow g_0 $ - элемент наилучшего приближения
+ \item Пусть для $f \in E\ $ существуют 2 элемента в $L$ наилучшего приближения $g_1, \ g_2$ \\
+       из 1) $f-g_1 \perp L \Leftrightarrow (f-g_1,g)=0 \ \forall g \in L\ $ \\
+       $f-g_2 \perp L \Leftrightarrow (f-g_2,g)=0 \ \forall g \in L\ \Rightarrow $ \\
+       $(f,g)-(g_1,g)-(f,g) + (g_2,g)=0 \Rightarrow (g_2,g)=(g_1,g) \Rightarrow g_1=g_2$
+\end{enumerate}
+\textbf{Теорема 2(Построение элемента наилучшего приближения)} \\
+Пусть $L \subset E$ конечномерное подпр-во с базисом $e=(e_1..e_n),E$- евклидово пр-во \\
+Тогда $\forall f \in E\ \ \exists ! g_0 \in L\ $- эл-т наилучшего приближения в $L$ и $g_0$ имеет вид $g_0 = \sum \limits_{i=1}^k {\alpha_i e_i} $,причем $\alpha_i..\alpha_n$- единственное решение системы \\
+$\left\{ \begin{matrix}
+\mbox{$\alpha_1 (e_1,e_1) + \alpha_2 (e_1,e_2)+ \cdots +\alpha_n (e_1,e_n) = (e_1,f)$} \\
+\mbox{$\alpha_1 (e_2,e_1) + \alpha_2 (e_2,e_2)+ \cdots +\alpha_n (e_2,e_n) = (e_2,f)$} \\
+\mbox{$\cdots $} \\
+\mbox{$\alpha_1 (e_n,e_1) + \alpha_2 (e_n,e_2)+ \cdots +\alpha_n (e_n,e_n) = (e_n,f)$} \\
+\end{matrix}\right.$ (*) \\
+При этом $\left| \left| f-g \right| \right|^2 = \left| \left| f \right| \right|^2-\sum \limits_{i=1}^n {\alpha_i(e_i,f)} = 
+\frac{\left| G(e_1..e_n,f) \right|}{\left| G(e_1..e_n) \right|}  $ \\
+\textbf{Доказательство} \\
+Ищем наилучшее приближение в виде $g_o = \sum \limits_{i=1}^n {\alpha_i e_i}, \ \alpha_i..\alpha_n$- неизв \\
+Если найдутся $\alpha_1..\alpha_n: (f-g_0) \perp L \Rightarrow f-g_0 \perp e_j, \ j=1..n \Leftrightarrow (e_j,f-g_0)=0$ \\
+$(e_j,f-g_0)=(e_j,f)-(e_j,g_0) = (e_j,f)-(e_j, \sum \limits_{i=1}^n {\alpha_i e_i}) = (e_j,f)-\sum \limits_{i=1}^n{\alpha_i(e_j,e_i)=0}$ \\
+$(e_j,f)=\sum \limits_{i=1}^n {\alpha_i (e_j,e_i)}, \ j=1..n $ \\
+$\left\{\sum \limits_{j=1}^n {\alpha_i(e_i,e_j)=(e_j,f)}\right. = (*)$ \\
+Определитель матрицы системы $G(e_1..e_n)$=
+$\begin{vmatrix}
+         (e_1,e_1) & (e_1,e_2) & \cdots & (e_1,e_n) \\
+         (e_2,e_1) & (e_2,e_2) & \cdots & (e_2,e_n) \\
+         \vdots & \vdots & \ddots & \vdots \\
+         (e_n,e_1) & (e_n,e_2) & \cdots & (e_n,e_n) \\
+\end{vmatrix}$ - определитель Грама $>0 \Rightarrow(*)$ имеет единственное решение \\
+$\left| \left| f-g \right| \right|^2 = (f-g_0,f-g_0) = (f-g_0,f) - \underset{=0}{(f-g_0,g_0)} (@) $ \\
+$f-g_0 \perp L$ \\
+$(@)=(f,f)-(g_0,f) = \left| \left| f \right| \right|^2 - (\sum \limits_{i=1}^n) = \left| \left| f \right| \right|^2 - \sum \limits_{i=1}^n {\alpha_i(e_i,f)} $ \\
+Если разложить определитель $G(e_1..e_n,f)$ по элементам последенего столбца и разделить на $G(e_1..e_n)$, то получим формулу \\
+$\sum \limits_{i=1}^n {\alpha_i(e_i,f)} = \left| \left| f \right| \right|^2 - \left| \left|  f-g_0 \right| \right|^2 $ \\
+$\alpha_1(f_1,e_1)+\alpha_2(f,e_2)+..+\alpha_n(f,e_n)=(f,f) - \left| \left| f-g_0 \right| \right|^2$ - еще одно ур-ние системы (*) \\
+$\left\{ \begin{matrix}
+\mbox{$\alpha_1 (e_1,e_1) + \alpha_2 (e_1,e_2)+ \cdots +\alpha_n (e_1,e_n) - (e_1,f)$}=0 \\
+\mbox{$\alpha_1 (e_2,e_1) + \alpha_2 (e_2,e_2)+ \cdots +\alpha_n (e_2,e_n) - (e_2,f)$}=0 \\
+\mbox{$\cdots $} \\
+\mbox{$\alpha_1 (e_n,e_1) + \alpha_2 (e_n,e_2)+ \cdots +\alpha_n (e_n,e_n) - (e_n,f)$}=0 \\
+\mbox{$\alpha_1 (f,e_1) + \alpha_2 (f,e_2)+ \cdots +\alpha_n (f,e_n) - \left( (f,f) - \left| \left|  f-g_0 \right| \right|^2 \right) $} \\
+\end{matrix}\right.$ (**) \\
+$\alpha_{n+1}=-1$ \\
+(**) имеет ненулевые решения $\alpha_1,\alpha_2..\alpha_n,\alpha_{n+1} = -1 \Rightarrow det (**) = 0$\\
+$\begin{vmatrix}
+  (e_1,e_1) & \cdots & (e_1,e_n) & (e_1,f) & 0 \\
+  \vdots & \ddots & \vdots & \vdots & \vdots \\
+  (e_n,e_1) & \cdots & (e_n,e_n) & (e_n,f) & 0 \\
+  (f,e_1) & \cdots & (f,e_n) & (f,f) & -\left| \left|  f-g_0 \right| \right|^2 \\
+ \end{vmatrix} = 0$ \\
+$\begin{vmatrix}
+  (e_1,e_1) & \cdots & (e_1,f) \\
+  \vdots & \ddots & \vdots \\
+  (f,e_1) & \cdots & (f,f) \\
+ \end{vmatrix} + $
+$\begin{vmatrix}
+  (e_1,e_1) & \cdots & 0 \\
+  \vdots & \ddots & \vdots \\
+  (e_n,e_1) & \cdots & 0 \\
+  (f,e_1) & \cdots & -\left| \left|  f-g_0 \right| \right|^2 \\
+ \end{vmatrix} = $
+$\left| G(e_1..e_n,f) \right| - \left| \left|  f-g_0 \right| \right|^2$
+$\begin{vmatrix}
+  (e_1,e_1) & \cdots & (e_1,e_n) \\
+  \vdots & \ddots & \vdots \\
+  (e_n,e_1) & \cdots & (e_n,e_n)
+ \end{vmatrix} = 0 \Rightarrow $
+$\left| \left|  f-g_0 \right| \right|^2 = \frac{\left| G(e_1..e_n,f) \right|}{\left| G(e_1..e_n) \right|}$ \\
+\textbf{Следствие} \\
+Если $e=(e_1..e_n)$ - ортонормированная система, то $\alpha_i=(e_i,f), \ i=1..n$\\
+$\left| \left|  f-g_0 \right| \right|^2 = \left| \left|  f \right| \right|^2 - \sum \limits_{i=1}^n {(e_i,f)^2}$ \\
+
+ 
+
+ 
+
