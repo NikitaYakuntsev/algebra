@@ -57,7 +57,7 @@ $h(x) = h\left( \sum\limits_{i=1}^n \alpha_i e_i \right) = \sum\limits_{i=1}^n \
 
 \underline{Замечание:} в силу Т. для лин. операторов сумма и произведение являются линейной формой
 
-\textbf{Доказательство:} %TODO
+\textbf{Доказательство:} %TODO добавляя доказательства, следи за переходом на новый лист в PDF!!
 \\
 
 \textbf{Теорема 3}
@@ -82,21 +82,102 @@ $h(x) = h\left( \sum\limits_{i=1}^n \alpha_i e_i \right) = \sum\limits_{i=1}^n \
 %end of th
 
 \textbf{Теорема 4} Если $E-n$-мерное лин. пр-во над полем $P$, то $(E^*)^*$ изоморфно $E$\\
-
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\
+\\ %mad dick
+\\
 \begin{center}
  \textbf{Билинейные формы}
 \end{center}
 Пусть $E$ - лин. пр-во над полем $P$
 
-\tex
+\textbf{Опр. 1} Билинейной формой наз-ся любое отображение $b : E \times E \to P\ $ \\
+(т.е. $\forall x,y\in E\ \exists b(x,y)\in P$; линейно по $x$ при $\forall y$ - фикс.; линейно по $y$ при $\forall x$ - фикс.
 
- 
+\textbf{Свойства:}
+\begin{enumerate}
+ \item $\forall x,y,z \in E\ b(x+y,z) = b(x,z) + b(y,z)$
+ \item $\forall x,y \in E\ \forall \alpha \in P\ b(\alpha x,y) = \alpha b(x,y)$
+ \item $\forall x,y,z \in E\ b(x,y+z) = b(x,y) + b(x,z)$
+ \item $\forall x,y \in E\ \forall \alpha \in P b(x,\alpha y) = \alpha b(x,y)$
+\end{enumerate}
 
+\textbf{Опр. 2} Матрицей билин. формы $b(x,y)$ в базисе $e=(e_1,\ldots,e_n)$ называется матрица
+ $[b]_e = \begin{pmatrix}
+           b(e_1, e_1) & \cdots & b(e_1, e_n) \\
+	   \cdots & \ddots & \cdots \\
+	   b(e_n, e_1) & \cdots & b(e_n, e_n)
+          \end{pmatrix}\quad b_{i,j} = b(e_i, e_j)$\\
 
+\textbf{Теорема 1.1} Пусть $b(x,y)$ - билин. форма на $E$ с матрицей $[b]_e = (b_{i,j})_{i,j = \overline{1,n}}$
 
+Тогда $\forall x,y \in E\ x = \sum\limits_{i=1}^n \alpha_i e_i\ y = \sum\limits_{j=1}^n \beta_j e_j;\ $
 
+$b(x,y) = \sum\limits_{i=1}^n \sum\limits_{j=1}^n b_{i,j} \alpha_i \beta_j\ (1) \Leftrightarrow b(x,y) = [x]_e' [b]_e [y]_e\ (2)$
 
+$[x]_e' = \begin{pmatrix} \alpha_1 & \cdots & \alpha_n \end{pmatrix}\quad [y]_e =\begin{pmatrix} \beta_1 \\ \cdots \\ \beta_n \end{pmatrix}\ $
 
+\textbf{Доказательство:} $b(x,y) = b\left(\sum\limits_{i=1}^n \alpha_i e_i,\ \sum\limits_{j=1}^n \beta_j e_j\right) = \sum\limits_{i=1}^n \sum\limits_{j=1}^n b(e_i, e_j) \alpha_i \beta_j\ = \sum\limits_{i=1}^n \sum\limits_{j=1}^n b_{i,j} \alpha_i \beta_j\ $
 
+$\begin{pmatrix}\alpha_1 & \cdots & \alpha_n \end{pmatrix} \begin{pmatrix} b_{1,1} & \cdots & b_{1.n} \\ \cdots & \ddots & \cdots \\ b_{n,1} & \cdots & b_{n,n} \end{pmatrix} \begin{pmatrix} \beta_1 \\ \cdots \\ \beta_n \end{pmatrix} =
+\begin{pmatrix}\alpha_1 & \cdots & \alpha_n \end{pmatrix}
+\begin{pmatrix}
+ \sum\limits_{j=1}^n b_{1,j} \beta_j \\
+ \cdots \\
+ \sum\limits_{j=1}^n b_{n,j} \beta_j
+\end{pmatrix} = \sum\limits_{i=1}^n \sum\limits_{j=1}^n b(e_i, e_j) \alpha_i \beta_j
+$\\
+
+\textbf{Теорема 1.2} Для любой матрицы $\mathcal{B} = (b_{i,j})_{i,j=\overline{1,n}} $ функция $b(x,y)$, определенная для $\forall x = \sum\limits_{i=1}^n \alpha_i e_i;\ \forall y = \sum\limits_{j=1}^n \beta_j e_j$ формулой
+$b(x,y) = \sum\limits_{i=1}^n \sum\limits_{j=1}^n b_{i,j} \alpha_i \beta_j\ (3) \Leftrightarrow b(x,y) = [x]_e' \mathcal{B} [y]_e\ (4)$, является билинейной, а ее матрица в базисе $e$ совпадает с матрицей $\mathcal{B}$
+
+\textbf{Доказательство: } Траспонируем $(4): b(x,y) = \left( [x]_e' \mathcal{B} [y]_e \right)' = \left( [y]_e' \mathcal{B} \right)[x]_e = (z_1\ldots z_n)[x]_e$ - лин. по $x\ \forall y$ - фикс.
+
+$b(x,y) = \left( [x]_e' \mathcal{B} \right)[y]_e = (u_1\ldots u_n) [y]_e$ - лин. по $y\ \forall x$ - фикс.
+
+М-ца $b(x,y)$ в базисе $e$ совп. с $\mathcal{B};\ b(e_i, e_j) = \underset{i} {\begin{pmatrix} 0 & \cdots & 1 & \cdots & 0 \end{pmatrix}} \mathcal{B} \begin{pmatrix} 0 \\ \cdots \\ 1 \\ \cdots \\ 0 \end{pmatrix}{}_j = b_{i,j}$
+
+Матрица $\left( b(e_i, e_j) \right)_{i,j=\overline{1,n}} = \mathcal{B}$\\
+%end of th
+
+\textbf{Опр. 3} Билин. форма $b(x,y)$ на $E$ называется симметричной, если $\forall x,y \in E\ b(x,y) = b(y,x)$
+
+\textbf{Теорема 3 (симметрия)} Билинейная форма на $n$-мерном пространстве симм. $\Leftrightarrow$ \underline{матрица} билин. формы в некотором базисе ($\Rightarrow$ в $\forall$) \underline{симметрична}
+
+\textbf{Доказательство:}
+\begin{enumerate}
+ \item билинейная форма симм $\overset{def} \Leftrightarrow b(x,y) = b(y,x)\ \forall x,y \in E$
+
+    $b(e_i, e_j) = b(e_j, e_i)\ \forall i,j = \overline{1,n}\ \forall e=(e_1,\ldots,e_n) \Rightarrow$ матрица симметрична
+
+ \item Пусть матр. билин. формы $b(x,y)$ симметрична в некотором базисе $e=(e_1,\ldots, e_n) \Rightarrow b(e_i, e_j) = b(e_j, e_i)$
+
+    $b(x,y): x = \sum\limits_{i=1}^n \alpha_i e_i;\ y = \sum\limits_{j=1}^n \beta_j e_j;\quad b(x,y) = [x]_e' [b]_e [y]_e$ трансп. $\Rightarrow $
+
+    $b(x,y = [y]_e' [b]_e' [x]_e;\ b(y,x) = [y]_e' [b]_e [x]_e);\ $т.к. м-ца симметр., то $[b]_e' = [b]_e \Rightarrow b(x,y) = b(y,x)\ \forall x,y\in E$
+
+    исп. 1, получим что $b(x,y)$ симм. в $\forall$ базисе.
+\end{enumerate}
+%end of th
+
+\textbf{Теорема 4 (изм. матрицы билин. формы при изм. базиса)}
+
+При изменении базиса $e=(e_1,\ldots,e_n) \to e' = (e_1',\ldots, e_n')$ с матр. перех. $T_{e\to e'}$ матрицы билин. формы в разных базисах связаны формулой $[b]_{e'} = T_{e\to e'}' [b]_e T_{e\to e'}$
+
+\textbf{Доказательство: } $b(x,y) = [x]_e' [b]_e [y]_e;\quad [y]_e = T_{e\to e'}[y]_{e'};\ [x]_e = T_{e\to e'} [x]_{e'}; $ подставляем
+
+$b(x,y) = \left( T_{e\to e'} [x]_{e'} \right)' [b]_e \left( T_{e\to e'}[y]_{e'} \right) = [x]_{e'}' \left( T_{e\to e'}' [b]_e T_{e\to e'} \right) [y]_{e'};$
+
+$\Bigg\{ \begin{matrix} b(x,y) = [x]_{e'}' \left( T_{e\to e'}' [b]_e T_{e\to e'} \right) [y]_{e'} \\ b(x,y) = [x]_{e'}' [b]_{e'} [y]_{e'} \end{matrix} $ 
+
+  
 
 
