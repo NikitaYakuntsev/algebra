@@ -2,6 +2,10 @@
 
 \textit{Линейные и билинейные функции (формы)}
 
+\begin{center}
+ \textbf{Линейные формы}
+\end{center}
+
 \textbf{Опр.1} $E$ - лин. пр-во над полем $P$. \\
 Линейное отображение $H : E \to P$ называется линейной формой $\Leftrightarrow \forall x,y \in E\ \forall \alpha \in P\ $
 \begin{enumerate}
@@ -37,13 +41,13 @@ $h(x) = h\left( \sum\limits_{i=1}^n \alpha_i e_i \right) = \sum\limits_{i=1}^n \
 \begin{enumerate}
  \item $\forall x,y \in E\ [x+y]_e = [x]_e + [y]_e;\ h(x+y) = \Phi[x+y]_e = \Phi([x]_e + [y]_e) = \Phi[x]_e + \Phi[y]_e =$\\$= h(x) + h(y)$
  \item $\forall \alpha \in P\ \forall x \in E\ [\alpha x]_e = \alpha[x]_e$\\
-$h(\alpha x) = \Phi[\alpha x]_e = \Phi(\alpha [x]_e) = \alpha \Phi[x]_e = \alpha h(x)$
+    $h(\alpha x) = \Phi[\alpha x]_e = \Phi(\alpha [x]_e) = \alpha \Phi[x]_e = \alpha h(x)$
 
-$h(e_1) = \begin{pmatrix} \varphi_1 & \cdots & \varphi_n \end{pmatrix} \begin{pmatrix} 1 \\ \cdots \\ 0 \end{pmatrix} = \varphi_1$\\
-$\ldots$\\
-$h(e_i) = \begin{pmatrix} \varphi_1 & \cdots & \varphi_n \end{pmatrix} \begin{pmatrix} 0 \\ \cdots \\ 1 \\ \cdots \\ 0 \end{pmatrix} i = \varphi_i $\\
+    $h(e_1) = \begin{pmatrix} \varphi_1 & \cdots & \varphi_n \end{pmatrix} \begin{pmatrix} 1 \\ \cdots \\ 0 \end{pmatrix} = \varphi_1$\\
+    $\ldots$\\
+    $h(e_i) = \begin{pmatrix} \varphi_1 & \cdots & \varphi_n \end{pmatrix} \begin{pmatrix} 0 \\ \cdots \\ 1 \\ \cdots \\ 0 \end{pmatrix} i = \varphi_i $\\
 
-$[h]_e = \begin{pmatrix} h(e_1) & \cdots & h(e_i) & \cdots & h(e_n) \end{pmatrix} = \begin{pmatrix} \varphi_1 & \cdots & \varphi_n \end{pmatrix} = \Phi$
+    $[h]_e = \begin{pmatrix} h(e_1) & \cdots & h(e_i) & \cdots & h(e_n) \end{pmatrix} = \begin{pmatrix} \varphi_1 & \cdots & \varphi_n \end{pmatrix} = \Phi$
 \end{enumerate}
 %end of th
 
@@ -67,18 +71,24 @@ $[h]_e = \begin{pmatrix} h(e_1) & \cdots & h(e_i) & \cdots & h(e_n) \end{pmatrix
  \item %TODO проверить 8 аксиом линейного пространства
  \item $\forall h \in E^*$ - лин. пр. $\overset{A}\leftrightarrow [h]_e$ - взаимно-однозначно в фикс. базисе $e=(e_1, \ldots, e_n)$
 
-$h_1 \to [h_1]_e,\ h_2\to [h_2]_e$ и $[h_1]_e = [h_2]_e \Rightarrow h_1 = h_2$
+    $h_1 \to [h_1]_e,\ h_2\to [h_2]_e$ и $[h_1]_e = [h_2]_e \Rightarrow h_1 = h_2$
 
-$\forall h_1, h_2 \in E^*\ [h_1 + h_2]_e = [h_1]_e + [h_2]_e;\quad \forall \alpha \in P\ \forall h\in E^*\ [\alpha h]_e = \alpha [h]_e$
+    $\forall h_1, h_2 \in E^*\ [h_1 + h_2]_e = [h_1]_e + [h_2]_e;\quad \forall \alpha \in P\ \forall h\in E^*\ [\alpha h]_e = \alpha [h]_e$
 
-$A(h) = [h]_e;\ A$-линейное и вз. однозн. $\Leftrightarrow$ биект. $\Rightarrow A$ - обр-мое $\Rightarrow A$ - изоморфизм. $E^*$ и $M_{1,n}(P)$
+    $A(h) = [h]_e;\ A$-линейное и вз. однозн. $\Leftrightarrow$ биект. $\Rightarrow A$ - обр-мое $\Rightarrow A$ - изоморфизм $E^*$ и $M_{1,n}(P)$
 
-Базисом $M_{1,n}(P)$ явл-ся $q_1=(1,0,\ldots,0),\ q_2=(0,1,\ldots,0),\ldots,\ q_n = (0,0,\ldots, 1) =\Rightarrow \mathrm{dim}\, M_{1,n} (P) = n \Rightarrow \mathrm{dim}\, E^* = n$
+    Базисом $M_{1,n}(P)$ явл-ся $q_1=(1,0,\ldots,0),\ q_2=(0,1,\ldots,0),\ldots,\ q_n = (0,0,\ldots, 1) \Rightarrow \mathrm{dim}\, M_{1,n} (P) = n \Rightarrow \mathrm{dim}\, E^* = n$
 \end{enumerate}
 %end of th
 
-\textbf{Теорема 4} Если $E-n$-мерное лин. пр-во над полем $P$, то $(E^*)^*$ изоморфно $E$
+\textbf{Теорема 4} Если $E-n$-мерное лин. пр-во над полем $P$, то $(E^*)^*$ изоморфно $E$\\
 
+\begin{center}
+ \textbf{Билинейные формы}
+\end{center}
+Пусть $E$ - лин. пр-во над полем $P$
+
+\tex
 
  
 
