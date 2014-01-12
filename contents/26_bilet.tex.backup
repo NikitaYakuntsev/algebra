@@ -93,26 +93,3 @@ $$
   (A(x),y) = \left[A(x)\right]^T_e G(e) \left[y\right]_e = (\left[A\right]_e \left[x\right]_e)^T G(e) \left[y\right]_e = \left[x\right]_e^T \left[A\right]_e^T G(e) \left[y\right]_e 
 $$
 
-$$
-  (x,A^*(y)) = \left[x\right]^T_e G(e)\left[A^*(y)\right]_e = \left[x\right]^T_e G(e)\left[A^*\right]_e\left[y\right]_e
-$$
-
-$$
-  \left[x\right]_e^T \left[A\right]_e^T G(e) \left[y\right]_e = \left[x\right]^T_e G(e)\left[A^*\right]_e\left[y\right]_e
-$$
-
-$$
-  \left[A\right]_e^T G(e) = G(e)\left[A^*\right]_e
-$$
-
-Векторы $e$ - это базис, а значит - линейно не зависимы, следовательно определитель матрицы Грама не равен нулю, а следовательно существует обратная матрица. Домножим на неё слева:
-
-$$
-  G^{-1}(e)\left[A\right]_e^T G(e) = \left[A^*\right]_e
-$$
-
-Если же базис - ортонормированный, тогда матрица Грама равна единичной матрице, и формула имеет вид:
-
-$$
-  \left[A\right]_e^T = \left[A^*\right]_e
-$$ 
