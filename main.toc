@@ -5,3 +5,4 @@
 \contentsline {subsection}{\numberline {1.3}\IeC {\CYRB }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrt } 21}{4}
 \contentsline {subsection}{\numberline {1.4}\IeC {\CYRB }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrt } 23}{6}
 \contentsline {subsection}{\numberline {1.5}\IeC {\CYRB }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrt } 28}{7}
+\contentsline {subsection}{\numberline {1.6}\IeC {\CYRB }\IeC {\cyri }\IeC {\cyrl }\IeC {\cyre }\IeC {\cyrt } 28}{11}
