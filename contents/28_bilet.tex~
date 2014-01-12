@@ -1,0 +1,41 @@
+\section{Функции многих переменных}
+\subsection{Билет 19}
+
+
+\textit{Евклидово пространство. Простейшие свойства.}
+
+
+ $E$ - вещественное линейное пространство называется евклидовым, если задана функция $E \times E \to \mathbb{R}$, называемая скалярным произведением \\ 
+(обозн. $\forall x, y\ \exists (x, y) \in \mathbb{R}$) и выполнено 4 аксиомы:
+  \begin{enumerate}
+    \item $\forall x, y \in E\ (x, y) = (y, x)$
+    \item $\forall x_1, x_2, y\,\in E\ (x_1 + x_2, y) = (x_1, y) + (x_2, y) $
+    \item $\forall \alpha\,\in \mathbb{R}\ \forall x, y\,\in E\ (\alpha x, y) = \alpha(x, y)$
+    \item $\forall x \in E\ (x, x) \ge 0, x = 0 \Leftrightarrow (x, x) = 0$
+  \end{enumerate}
+  
+  \begin{center}
+   \textbf{Свойства:}
+  \end{center}
+  
+  \begin{enumerate}
+   \item \begin{description}
+          \item [а)] $(0,y)=0 \ \forall y \in E\ $
+          \item [b)] $(x,0)=0 \ \forall x \in E\ $
+         \end{description}
+         \textbf{Доказательство:} 
+         a) $\stackrel {3 \  axiom}{\Rightarrow}$ при $\alpha = 0 \ (0x,y)=0(x,y)=(0,y)=0, \ \forall y \in E\ $
+   \item \begin{description}
+          \item [a)] $\forall n \in \mathbb{N}\, \forall \alpha_1..\alpha_n \in \mathbb{R}\ \forall x_1..x_n,y \in E\ $ \\
+	  	$\left( \sum \limits_{i=1}^n {\alpha_i x_i,y} \right) = \sum \limits_{i=1}^{n} {\alpha_i \left( x_i,y \right)} $ \\
+	  	\textbf{Доказательство: } %\TODO
+	  \item [b)] 
+         \end{description}
+      
+         
+
+  \end{enumerate}
+
+
+
+
