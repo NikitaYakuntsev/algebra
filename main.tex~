@@ -20,7 +20,7 @@
 
 % Title Page
 \title{Билеты по Алгебре и теории чисел 19-...\\ 3 семестр. МОиАИС.}
-\author{Якунцев Никита}
+\author{Никита Якунцев, Андрей Сотников, Никита Хатеев, to be continued...}
 
 \begin{document}
 \maketitle
@@ -40,5 +40,8 @@
 
 
 \include{./contents/19_bilet}
+\include{./contents/20_bilet}
+
+\include{./contents/28_bilet}
 
 \end{document}
