@@ -1,3 +1,61 @@
 \subsection{Билет 23}
 
 \textit{Обобщённая теорема Пифагора. Ортогональное дополнение. Разложение конечномерного евклидова пространства в прямую сумму подпространства и его ортогонального дополнения.}
+
+\textbf{Теорема 1:} (Обобщенная теорема Пифагора) Пусть дана ортогональная система векторов $e_1,\ldots,e_k$ в евклидовом пространстве. $x = \sum_{i=1}^k e_i$
+
+Тогда, $\|x\|^2 = \sum_{i=1}^k \|e_i\|^2$
+
+\textbf{Доказательство:}
+
+$$
+  \|x\|^2 = (x,x) = (\sum_{i=1}^k e_i,\sum_{j=1}^k e_j) = \sum_{i=1}^k \sum_{j=1}^k (e_i,e_j)
+$$
+
+$$
+  \forall i,j ~ i\neq j ~ (e_i,e_j) = 0
+$$
+
+$$
+ \sum_{i=1}^k \sum_{j=1}^k (e_i,e_j) = \sum_{i=1}^k (e_i,e_i) = \sum_{i=1}^k\|e_i\|^2
+$$ 
+
+Пусть есть множество $M \subset E$. Ортогональным дополением к множеству $M$ называют множество $M^\bot = \{x\in E: \forall y \in M ~ (x,y) = 0\}$
+
+\textbf{Теорема 2:} $\forall M \subset E ~ M^\bot$ - линейное подпространство.
+
+\textbf{Доказательство:}
+
+\begin{enumerate}
+ \item $\forall x,y \in M^\bot ~ x+y \in M^\bot$
+      
+       $\forall z \in M ~ (x+y,z) = (x,z)+(y,z) = 0+0 = 0 \Rightarrow x+y \in M^\bot$
+ \item $\forall x \in M^\bot ~ \forall \alpha \in R ~ \alpha x \in M^\bot$
+       
+       $\forall z \in M ~ (\alpha x,z) = \alpha(x,z) = \alpha * 0 = 0 \Rightarrow \alpha x \in M^\bot$
+\end{enumerate}
+
+\textbf{Теорема 3:} Пусть $E$ - евклидово пространство, $\dim E = n < \infty$. Пусть $L \subset E$ - линейное подпространство. Тогда, $E = L + L^\bot$
+
+\textbf{Доказательство: } 
+
+\begin{enumerate}
+ \item $E = \{0\}$ - очевидно
+ \item $\dim E = n > 0$
+       \begin{enumerate}
+        \item $L = 0, L^\bot = E$
+        
+	      $\forall x \in E ~ x = 0 + x$
+	\item $L = E, L^\bot = 0$
+        
+	      $\forall x \in E ~ x = x + 0$
+	\item $\dim L = k > 0$
+	
+	      Пусть $e_1,\ldots,e_k$ - базис в $L$.
+	      Дополним до базиса в $E - e_1,\ldots,e_n$
+	      
+	      Проведем процесс ортогонализации и получим ортонормированный базис $f_1,\ldots, f_n$
+       \end{enumerate}
+
+\end{enumerate}
+
