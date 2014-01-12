@@ -26,14 +26,28 @@
          \textbf{Доказательство:} 
          a) $\stackrel {3 \  axiom}{\Rightarrow}$ при $\alpha = 0 \ (0x,y)=0(x,y)=(0,y)=0, \ \forall y \in E\ $
    \item \begin{description}
-          \item [a)] $\forall n \in \mathbb{N}\, \forall \alpha_1..\alpha_n \in \mathbb{R}\ \forall x_1..x_n,y \in E\ $ \\
+          \item [a)] $\forall n \in \mathbb{N}\ , \forall \alpha_1..\alpha_n \in \mathbb{R}\ \forall x_1..x_n,y \in E\ $ \\
 	  	$\left( \sum \limits_{i=1}^n {\alpha_i x_i,y} \right) = \sum \limits_{i=1}^{n} {\alpha_i \left( x_i,y \right)} $ \\
 	  	\textbf{Доказательство: } %\TODO
-	  \item [b)] 
+	  \item [b)] $\forall m \in \mathbb{N}\ , \ \forall \beta_1..\beta_m \in \mathbb{R}\ , \ \forall y_1..y_m,x \in E\ $ \\
+		$\left( x,\sum \limits_{i=1}^{n} {\beta_i,y_i} \right) = \sum \limits_{i=1}^n {\beta_i \left( x,y_i \right)} $ \\
+		\textbf{Доказательство: } %\TODO
+          \item [c)] $\forall m,n \in \mathbb{N}\ , \ \forall \alpha_1..\alpha_n,\beta_1..\beta_m \in \mathbb{R}, \forall x_1..x_n,y_1..y_m \in E\ $ \\
+		$\left( \sum \limits_{i=1}^n {\alpha_i,x_i} , \sum \limits_{j=1}^m {\beta_j,y_j} \right) = 
+		\sum \limits_{i=1}^n \sum \limits_{j=1}^m {\alpha_i,\beta_j \left( x_i,y_i \right)} $ \\
+		\textbf{Доказательство: } %\TODO
          \end{description}
-      
-         
-
+   \item Пусть \begin{description}
+                \item [a)] $\left( x,y \right) = 0, \forall y \in E\ \Rightarrow x=0 $ 
+                \item [a)] $\left( x,y \right) = 0, \forall x \in E\ \Rightarrow y=0 $
+               \end{description}
+	 \textbf{Доказательство: } a) $\left( x,y \right)=0, \  \forall y $ пусть $y=x \Rightarrow \left( x,x \right) = 0 \stackrel{4 \ axiom}{\Rightarrow} x=0$ \\
+   \item Тождество параллелограма \\
+	 $\left( \left( x+y \right),\left( x+y \right) \right) + \left( \left( x-y \right),\left( x-y \right) \right) = 
+	 2\left( x,x \right) + 2\left( y,y \right) $ \\
+	 \textbf{Доказательство: } \\
+	 $\left( x+y,x+y \right) + \left( x-y,x-y \right) = \left( x,x \right) + \left( x,y \right) + \left( y,x \right) + \left( y,y \right) +
+	 \left( x,x \right) - \left( x,y \right) - \left( y,x \right) + \left( y,y \right) =2\left( x,x \right) + 2\left( y,y \right) $
   \end{enumerate}
 
 

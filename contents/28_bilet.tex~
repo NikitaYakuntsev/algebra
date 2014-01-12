@@ -29,12 +29,7 @@
           \item [a)] $\forall n \in \mathbb{N}\, \forall \alpha_1..\alpha_n \in \mathbb{R}\ \forall x_1..x_n,y \in E\ $ \\
 	  	$\left( \sum \limits_{i=1}^n {\alpha_i x_i,y} \right) = \sum \limits_{i=1}^{n} {\alpha_i \left( x_i,y \right)} $ \\
 	  	\textbf{Доказательство: } %\TODO
-	  \item [b)] $\forall m \in \mathbb{N}\, \ \forall \beta_1..\beta_m \in \mathbb{R}\, \ \forall y_1..y_m,x \in E\ $ \\
-		$\left( x,\sum \limits_{i=1}^{n} {\beta_i,y_i} \right) = \sum \limits_{i=1}^n {\beta_i \left( x,y_i \right)} $ \\
-		\textbf{Доказательство: } %\TODO
-          \item [c)] $\forall m,n \in \mathbb{N}\, \ \forall \alpha_1..\alpha_n,\beta_1..\beta_m \in \mathbb{R}, \forall x_1..x_n,y_1..y_m \in E\ $ \\
-		$\left( \sum \limits_{i=1}^n {\alpha_i,x_i} , \sum \limits_{j=1}^m {\beta_j,y_j} \right) = 
-		\sum \limits_{i=1}^n \sum \limits_{j=1}^m {\alpha_i,\beta_j \left( x_i,y_i \right)} $
+	  \item [b)] 
          \end{description}
       
          
