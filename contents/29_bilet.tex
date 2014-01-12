@@ -1,8 +1,120 @@
-\subsection{Билет 28}
+\subsection{Билет 29}
 
 \textit{Квадратичные функции (формы)}\\
 
-\textbf{Опр. 1} Квадр. формой на $E$ - лин. пр-во над полем $P$ называется ф-ция, определяемая равенством $k(x)=b(x,x)\ \forall x\in E$, где $b(x,y)$ - симм. билин. форма на $E$
+\textbf{Опр. 1} Квадр. формой на $E$ - лин. пр-во над полем $P$ называется ф-ция, определяемая равенством $k(x)=b(x,x)\ \forall x\in E$, где $b(x,y)$ - симм. билин. форма на $E$ \\
+
+\textbf{Теорема 1} Для заданной кв. формы $k(x)$ на $E \exists! b(x,y)$ - симм. билин. форма, для которой $k(x) = b(x,x)\ \forall x\in E$
+
+\textbf{Доказательство: } $b_1{x,y}, b_2(x,y)$ - симм. билин.;\quad $k(x) = b_1(x,x); k(x) = b_2(x,x)$
+
+$k(x+y) = b_1(x+y, x+y) = b_1(x,x) + b_1(x,y) + b_1(y,x) + b_1(y,y) = b_1(x,x) +  2b_1(x,y) +$\\$+ b_1(y,y) = k(x)+2b_1(x,y)+k(y) \Rightarrow b_1(x,y) = \frac{k(x+y) - k(x)-k(y)}{2}$
+
+$b_2 = \frac{k(x+y) - k(x)-k(y)}{2} \Rightarrow b_1(x,y) = b_2(x,y)\ \forall x,y \in E$\\
+
+\underline{Следствие:} по заданной кв. форме восстанавливается симм. билин. форма
+
+\textbf{Опр. 2} М-цей кв. формы $k(x) = b(x,x)$ на $E$ наз-ся матрица симм. билин. формы $b(x,y)$
+
+\textbf{Опр. 3} Квадр. форма $k(x) = b(x,x)$ на конечном лин. пр-ве имеет канонический вид в базисе $e$, если ее матрица в базисе имеет диаг. вид $[b]_e = \begin{pmatrix} \lambda_1 & \mathcal{O} \\ \cdots & \cdots \\ \mathcal{O} & \lambda_n  \end{pmatrix}$\\
+Этот базис называется каноническим и кв. форма имеет вид $\textbf{(*)}\ k(x) = \lambda_1 \alpha_1^2 + \ldots + \lambda_n \alpha_n^2,\ $\\ где $x = \sum\limits_{i=1}^n \alpha_i e_i$\\
+
+\textbf{Теорема 2} $\forall k(x) = b(x,x)$ - кв. форма на конечном $n-$мерном евкл. пр-ве $E \exists$ канонический базис $e=(e_1,\ldots,e_n)$, в котором кв. форма имеет канонический вид \textbf{(*)}
+
+\textbf{Доказательство: } Метод Лагранжа (выделение квадратов): $x = \sum\limits_{i=1}^n \alpha_i e_i$
+
+$k(x) = b(x,x) = \sum\limits_{i,j=1}^n b(e_i, e_j) \alpha_i \alpha_j = \sum\limits_{i,j=1}^n b_{i,j} \alpha_i \alpha_j (**)$
+
+Индукция по кол-ву $m$ координат $\alpha_1,\ldots,\alpha_n$, входящих в ф-лу (**) с ненуленвыми коэф-тами:
+\begin{enumerate}
+ \item $m=1$, без огр. общности $\alpha_1;\quad k(x) = b_{1,1} \alpha_1^2$ верно
+ \item при $\ \forall m < p$ утв. верно: если кв. форма содержит $\alpha_1,..,\alpha_m$ с ненул. коэф., то\\ $\exists e' = (e_1',..,e_n')$ - базис, в котором м-ца имеет вид
+$\begin{pmatrix}
+  b_{1,1}' & \cdots & \cdots & \cdots & \mathcal{O} \\
+  \mathcal{O} & b_{2,2}' & \cdots & \cdots & \mathcal{O} \\
+  \cdots & \cdots & \ddots & \cdots & \cdots \\
+  \mathcal{O} & \cdots & \cdots & b_{m,m}' & \mathcal{O} \\
+  \mathcal{O} & \mathcal{O} & \cdots & \mathcal{O} & \ddots
+ \end{pmatrix}
+$
+ \item Док. для $m=p$
+
+$b(x,x) = \sum\limits_{i,j=1}^p b_{i,j} \alpha_i \alpha_j = | b_{i,j} = b_{j,i} | = \sum\limits_{i,j=1}^n b_{i,i}^2 + 2 \sum\limits_{1 \le i < j \le p} b_{i,j} \alpha_i \alpha_j$
+
+Если все $b_{i,j}=0$ при $i<j$, то кв. форма уже имеет канонический вид.
+Пусть не все $b_{i,j}=0$
+\begin{enumerate}
+ \item Пусть все $b_{i,i}=0,\ i=\overline{1,p};\ $ Если $b_{i,j} \ne 0, i<j$ то делаем замену:
+
+    $\alpha_i = \alpha_i' - \alpha_j';\ \alpha_j = \alpha_i' + \alpha_j';\ \alpha_k = \alpha_k';\quad \forall k \ne j, k\ne i$
+
+    $2b_{i,j}\alpha_i \alpha_j = \underset{\ne 0} {2b_{i,j}} (\alpha_i')^2 - \underset{\ne 0}{2b_{i,j}} (\alpha_j')^2$
+
+    $\begin{pmatrix}
+      \alpha_1 \\ \cdots \\
+      \alpha_i \\ \cdots \\
+      \alpha_j \\ \cdots \\
+      \alpha_n 
+     \end{pmatrix}  = \{T: m_{l,l} = 1; m_{i,i} = 1; m_{i,j} = -1; m_{j,i} = 1; m_{j,j} = 1; i < j\} * 
+     \begin{pmatrix} 
+      \alpha_1' \\ \cdots \\
+      \alpha_i' \\ \cdots \\
+      \alpha_j' \\ \cdots \\
+      \alpha_n' 
+     \end{pmatrix}
+    $\quad $\left| T \right| \ne 0;\ $ Матрица $T$ определяет переход от одного базиса к другому.
+ \item Пусть в кв. форме $\exists i\ : b_{i,i} \ne 0. \alpha_i = \alpha_{p'}; \alpha p = \alpha_{i'}$ после замены коэф. при $(\alpha_p')^2 \ne 0$
+
+$b(x,x) = \sum\limits_{i=1}^p b_{i,i} \alpha_i^2 + 2\sum\limits_{1\le i<j \le p} b_{i,j} \alpha_i \alpha_j = \underset{=c(\alpha_1,..,\alpha_{p-1})}{\left( \sum\limits_{i=1}^{p-1} b_{i,i} \alpha_i^2 + 2\sum\limits_{1\le i<j \le p-1} b_{i,j} \alpha_i \alpha_j \right)} + $\\
+$+ \left( b_{pp} \alpha_p^2 + 2\sum\limits_{1\le i \le p-1} b_{i,p} \alpha_i \alpha_p \right) = c + b_{p,p}\left( \alpha_p^2 + 2\sum\limits_{1\le i \le p-1} \frac{b_{i,p}}{b_{p,p}} \alpha_i \alpha_p \right) = (\times)$  
+
+добавим и вычтем $b_{p,p} \left( \sum\limits_{i=1}^{p-1} \left( \frac{b_{i,p}}{b_{p,p}}\alpha_i \right)^2 + 2 \sum\limits_{1 \le i < j \le p-1} \frac{b_{i,p} b_{j,p}}{b_{p,p}^2}\alpha_i \alpha_j \right) = d(\alpha_1,..,\alpha_{p-1})$
+
+$(\times) = c + b_{p,p} \underset{=\alpha_p'}{\left( \alpha_p + \frac{b_{1,p}}{b_{p,p}}\alpha_1 + \ldots + \frac{b_{p-1,p}}{b_{p,p}}\alpha_{p-1} \right)^2} - d = (\times \times);\quad h = (c-d)$ - кв. форма, отн. $\alpha_1,..,\alpha_{p-1};\ m = p-1 < p;\quad
+h$ по пр. инд. к квадратам
+
+$\left\{ 
+ \begin{matrix}
+  \alpha_1 = t_{1,1}\alpha_1 + \ldots + t_{1,p-1} \alpha_{p-1} \\
+  \cdots \\
+  \alpha_{p-1}' = t_{p-1,1}\alpha_1 + \ldots + t_{p-1, p-1} \alpha_{p-1} \\
+  \alpha_p' = \frac{b_{1,1}}{b_{p,p}}\alpha_1 + \ldots + \frac{b_{p-1,p}}{b_{p,p}}\alpha_{p-1} + \alpha_p \\
+  \alpha_{p+1}' = \alpha_{p+1} \\
+  \cdots \\
+  \alpha_n' = \alpha_n \\
+ \end{matrix} \right.
+$ \\
+
+$T_1 = 
+\begin{pmatrix}
+ t_{1,1} & \cdots & t_{1,p-1} & 0 & | & \cdots & 0 \\
+ \cdots & \cdots & \cdots & \cdots & | & \cdots & \cdots \\
+ t_{p-1, 1} & \cdots & t_{p-1, p-1} & 0 & | & \cdots & 0 \\
+ \frac{b_{1,p}}{b_{p,p}} & \cdots & \frac{b_{p-1,p}}{b_{p,p}} & 1 & | & \cdots & 0 \\
+ \overline{0} & \overline{\cdots} & \overline{\cdots} & \overline{0} & 1  & \cdots & 0 \\
+ \cdots & \cdots & \cdots & \cdots & \cdots &\ddots & \cdots \\
+ 0 & \cdots & \cdots & 0 & \cdots & \cdots & 1 
+\end{pmatrix};\quad |T_1| \ne 0; T_1^{-1} $ - матр. перехода от старого к новому\\
+
+$(\times \times) = \sum\limits_{i=1}^{p-1} \lambda_i (\alpha_i')^2 + b_{p,p} (\alpha_p')^2$
+
+Матрица кв. формы в новом базисе: 
+$\begin{pmatrix}
+  \lambda_1 & \mathcal{O}\\
+  \mathcal{O} & \ddots & \mathcal{O} \\
+  \mathcal{O} & \cdots & \lambda_{p-1} & \mathcal{O} \\
+  \mathcal{O} & \mathcal{O} & \cdots & b_{p,p} & \mathcal{O} \\
+  \mathcal{O} & \mathcal{O} & \cdots & \mathcal{O} & \ddots & \mathcal{O} \\
+  \mathcal{O} & \mathcal{O} & \cdots & \cdots & \mathcal{O} & \mathcal{O}
+ \end{pmatrix}
+$
+\end{enumerate}
+
+\end{enumerate}
+
+
+
+
 
 
 

@@ -70,43 +70,14 @@ $+ \left( b_{pp} \alpha_p^2 + 2\sum\limits_{1\le i \le p-1} b_{i,p} \alpha_i \al
 
 добавим и вычтем $b_{p,p} \left( \sum\limits_{i=1}^{p-1} \left( \frac{b_{i,p}}{b_{p,p}}\alpha_i \right)^2 + 2 \sum\limits_{1 \le i < j \le p-1} \frac{b_{i,p} b_{j,p}}{b_{p,p}^2}\alpha_i \alpha_j \right) = d(\alpha_1,..,\alpha_{p-1})$
 
-$(\times) = c + b_{p,p} \underset{=\alpha_p'}{\left( \alpha_p + \frac{b_{1,p}}{b_{p,p}}\alpha_1 + \ldots + \frac{b_{p-1,p}}{b_{p,p}}\alpha_{p-1} \right)^2} - d = (\times \times);\quad h = (c-d)$ - кв. форма, отн. $\alpha_1,..,\alpha_{p-1};\ m = p-1 < p;\quad
-h$ по предп. инд. можно привести к квадратам
+$(\times) = c + b_{p,p} \underset{=\alpha_p'}{\left( \alpha_p + \frac{b_{1,p}}{b_{p,p}}\alpha_1 + \ldots + \frac{b_{p-1,p}}{b_{p,p}}\alpha_{p-1} \right)^2} - d;\quad h = (c-d)$ - кв. форма, отн. $\alpha_1,..,\alpha_{p-1};\ m = p-1 < p$
 
-$\left\{ 
+$h$ по предп. инд. можно привести к квадратам
+
+$\Bigg\{ 
  \begin{matrix}
-  \alpha_1 = t_{1,1}\alpha_1 + \ldots + t_{1,p-1} \alpha_{p-1} \\
-  \cdots \\
-  \alpha_{p-1}' = t_{p-1,1}\alpha_1 + \ldots + t_{p-1, p-1} \alpha_{p-1} \\
-  \alpha_p' = \frac{b_{1,1}}{b_{p,p}}\alpha_1 + \ldots + \frac{b_{p-1,p}}{b_{p,p}}\alpha_{p-1} + \alpha_p \\
-  \alpha_{p+1}' = \alpha_{p+1} \\
-  \cdots \\
-  \alpha_n' = \alpha_n \\
- \end{matrix} \right.
-$ \\
-
-$T_1 = 
-\begin{pmatrix}
- t_{1,1} & \cdots & t_{1,p-1} & 0 & | & \cdots & 0 \\
- \cdots & \cdots & \cdots & \cdots & | & \cdots & \cdots \\
- t_{p-1, 1} & \cdots & t_{p-1, p-1} & 0 & | & \cdots & 0 \\
- \frac{b_{1,p}}{b_{p,p}} & \cdots & \frac{b_{p-1,p}}{b_{p,p}} & 1 & | & \cdots & 0 \\
- \overline{0} & \overline{\cdots} & \overline{\cdots} & \overline{0} & 1  & \cdots & 0 \\
- \cdots & \cdots & \cdots & \cdots & \cdots &\ddots & \cdots \\
- 0 & \cdots & \cdots & 0 & \cdots & \cdots & 1 
-\end{pmatrix};\quad |T_1| \ne 0; T_1^{-1} $ - матр. перехода от старого к новому\\
-
-$(\times \times) = \sum\limits_{i=1}^{p-1} \lambda_i (\alpha_i')^2 + b_{p,p} (\alpha_p')^2$
-
-Матрица кв. формы в новом базисе: 
-$\begin{pmatrix}
-  \lambda_1 & \mathcal{O}\\
-  \mathcal{O} & \ddots & \mathcal{O} \\
-  \mathcal{O} & \cdots & \lambda_{p-1} & \mathcal{O} \\
-  \mathcal{O} & \mathcal{O} & \cdots & b_{p,p} & \mathcal{O} \\
-  \mathcal{O} & \mathcal{O} & \cdots & \mathcal{O} & \ddots & \mathcal{O} \\
-  \mathcal{O} & \mathcal{O} & \cdots & \cdots & \mathcal{O} & \mathcal{O}
- \end{pmatrix}
+  \alpha_1 = t_{1,1}\alpha_1 + \ldots + t_{1,p-1} \alpha_{p-1}       
+ \end{matrix}
 $
 \end{enumerate}
 
