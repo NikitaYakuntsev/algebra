@@ -1,0 +1,8 @@
+*.aux
+*.dvi
+*.idv
+*.log
+*.swp
+*.thm
+*.toc
+*.tmp
