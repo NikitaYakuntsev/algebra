@@ -1,0 +1,124 @@
+\subsection{Билет 24}
+
+
+\textit{Вычисление скалярного произведения векторов через координаты в различных базисах. Матрица Грама и её свойства. Определитель Грамма.}
+
+
+\textbf{Теорема 1} \\
+Пусть $E$-евклидово пространство, $0<dimE=n<\infty$ \\
+$(*)(e_1..e_n)$-базис в $E, \forall x,y \in E\ , \ x=\sum \limits_{i=1}^n {\alpha_i e_i} $ \\
+Тогда если:
+\begin{description}
+ \item [I.] (*) - ортонорм базис $y=\sum \limits_{j=1}^n {\beta_j e_j}$ \\
+	то $(x,y)=\sum \limits_{i=1}^n {\alpha_i \beta_i} = (\alpha_1..\alpha_n) \begin{pmatrix} \beta_1 \\ \vdots \\ \beta_n \end{pmatrix} = [x]_e'[y]_e$
+ \item [II.] (*) - произвольный базис, то $(x,y)=\sum \limits_{i=1}^n \sum \limits_{j=1^n} {\alpha_i \beta_j(e_i,e_j)} = \\ $
+       $= (\alpha_1 .. \alpha_n)$ 
+       $\begin{pmatrix}
+         (e_1,e_1) & (e_1,e_2) & \cdots & (e_1,e_n) \\
+         (e_2,e_1) & (e_2,e_2) & \cdots & (e_2,e_n) \\
+         \vdots & \vdots & \ddots & \vdots \\
+         (e_n,e_1) & (e_n,e_2) & \cdots & (e_n,e_n) \\
+        \end{pmatrix}$
+       $\begin{pmatrix}
+         \beta_1 \\ \beta_2 \\ \vdots \\ \beta_n \\
+        \end{pmatrix}$ = 
+       $[x]_e'G(e_1..e_n)[y]_e$ 
+\end{description}
+\textbf{Доказательство(1)} \\
+$x=\sum \limits_{i=1}^n {\alpha_i e_i}, \ y=\sum \limits_{j=1}^n {\beta_j e_j} $ \\
+$(x,y)=\left( \sum \limits_{i=1}^n {\alpha_i e_i},\sum \limits_{j=1}^n {\beta_j e_j} \right) = \sum \limits_{i=1}^n \sum \limits_{j=1}^n {\alpha_i \beta_j (e_i,e_j)} $ \\
+При $(e_1..e_n)$ - ортонормированный базис \\
+$(e_i,e_j)=$
+$\left\{ \begin{matrix}
+\mbox{$0, \ i \ne j $} \\
+\mbox{$1, \ i=j$}
+\end{matrix}\right.$ \\
+$(x,y)=\sum \limits_{i=1}^n {\alpha_i \beta_i} = (\alpha_1..\alpha_n) \begin{pmatrix} \beta_1 \\ \vdots \\ \beta_n \end{pmatrix} \Rightarrow$ (1)-доказано\\
+\textbf{Доказательство(2)} \\
+$((e_1,e_1),(e_1,e_2),..,(e_1,e_n)) \begin{pmatrix} \beta_1 \\ \vdots \\ \beta_n \end{pmatrix} = \sum \limits_{j=1}^n {(e_i,e_j) \beta_j}, \ i=1..n $ \\
+$(\alpha_1..\alpha_n) \begin{pmatrix} \sum \limits_{j=1}^n {(e_i,e_j)\beta_1} \\ \cdots \\ \sum \limits_{j=1}^n {(e_i,e_j)\beta_j} \end{pmatrix}$ = 
+$\sum \limits_{i=1}^n \sum \limits_{j=1}^n {(e_i,e_j)\alpha_i \beta_j} $ \\
+\textbf{Def: } $e_1,e_2..e_n \in E\ (*)$ \\
+Матрицей Грама системы векторов (*) называется матрица \\ $G(e_1..e_n)=$ 
+       $\begin{pmatrix}
+         (e_1,e_1) & (e_1,e_2) & \cdots & (e_1,e_n) \\
+         (e_2,e_1) & (e_2,e_2) & \cdots & (e_2,e_n) \\
+         \vdots & \vdots & \ddots & \vdots \\
+         (e_n,e_1) & (e_n,e_2) & \cdots & (e_n,e_n) \\
+        \end{pmatrix}$ \\
+Определителем Грама называется $detG(e_1..e_n)$\\
+\textbf{Теорема 2} \\
+Система векторов $(e_1..e_n)$ 
+\begin{enumerate}
+ \item ортогональная $\Leftrightarrow G(e_1..e_n)$ - диагональная 
+ \item ортонормированная $\Leftrightarrow G(e_1..e_n)$ - единичная 
+\end{enumerate}
+\textbf{Доказательство} 
+\begin{enumerate}
+ \item ортогональная $\Leftrightarrow (e_i,e_j)=0$ при $i \ne j \Leftrightarrow$ все внедиагональные равны 0 $\Leftrightarrow G(e_1..e_n)$ - диагональная
+ \item $(e_1..e_n)$ - ортонорм $\Leftrightarrow (e_i,e_j)=$ $\left\{ \begin{matrix}
+\mbox{$0, \ i \ne j $} \\
+\mbox{$1, \ i=j$}
+\end{matrix}\right. \Leftrightarrow G(e_1..e_n)$-единичная 
+\end{enumerate}
+\textbf{Теорема 3(Связь матриц Грама в разных базисах)} \\
+Пусть $e=(e_1..e_n)$ - старый базис в E  $e'=(e_1'..e_n')$- новый базис в E \\
+$T_{e \to e'}$ - матрица перехода \\
+Пусть $G(e_1..e_n)$ и $G(e_1'..e_n')$ - матрицы Грама \\
+Тогда $G(e_1'..e_n')=T_{e \to e'}' G(e_1..e_n)T_{e \to e'}$ \\
+\textbf{Доказательство} \\
+$\forall x,y \in E\ , \ x=\sum \limits_{i=1}^n {\alpha_i e_i} , \ y=\sum \limits_{j=1}^n {\beta_j e_j} $ \\
+$(1) \ (x,y)=[x]_e'G(e_1..e_n)[y]_e$ - в старом \\
+$x=\sum \limits_{i=1}^n {\alpha_i' e_i'} , \ y=\sum \limits_{j=1}^n {\beta_j' e_j'}$ \\
+$(2) \ (x,y)=[x]_{e'}' G(e_1'..e_n') [y]_{e'} $ - в новом \\
+$[x]_e=T_{e \to e'} [x]_{e'}$ \\
+$[y]_e=T_{e \to e'} [y]_{y'}$ из (1) \\
+$(x,y)=(T_{e \to e'}[x]_{e'})'G(e_1..e_n)T_{e \to e'} [y]_{e'} (*)$\\
+$(AB)'=B'A'$ \\
+$(*)=[x]_{e'}'(T_{e \to e'}'G(e_1..e_n)T_{e \to e'})[y]_{e'}$ \\
+$G(e_1'..e_n')=T_{e \to e'}'G(e_1..e_n)T_{e \to e'}$ \\
+\textbf{Теорема 4(Критерий ЛЗ и ЛНЗ)} \\
+Пусть $(*)(e_1..e_n)$- произвольная система векторов в $E$- евкл. пр-ве. Тогда
+\begin{enumerate}
+ \item $(*)$ ЛЗ $\Leftrightarrow detG(e_1..e_n)=0$
+ \item $(*)$ ЛНЗ $\Leftrightarrow detG(e_1..e_n)>0$ 
+\end{enumerate}
+\textbf{Доказательство} \\
+\begin{enumerate}
+ \item $(*)$-ЛЗ $\Rightarrow detG(e_1..e_n)=0$ ? \\
+       $(*)$ ЛЗ $\Rightarrow \left[ \begin{matrix}
+			      \mbox{$e_1=0$} \\
+			      \mbox{$\exists j \ge 2$}
+			      \end{matrix}\right.$ 
+       $e_j=\sum \limits_{i=1}^{j-1} {\alpha_i e_i}$\\
+       $e_1=0, \ (e_1,e_k)=0, \ k=1..n \Rightarrow$ - 1-строка $=0 \Rightarrow detG(e_1..e_n)=0$
+       j-столб\\
+       $\begin{pmatrix}
+        (e_1,e_j) \\ (e_2,e_j) \\ \cdots \\ (e_n,e_j) 
+       \end{pmatrix}$ =
+       $\begin{pmatrix}
+         \sum \limits_{i=1}{j-1} (e_1,e_i) \\
+         \sum \limits_{i=1}{j-1} (e_2,e_i) \\
+         \cdots \\
+         \sum \limits_{i=1}{j-1} (e_n,e_i) \\
+        \end{pmatrix}$=
+        $\alpha_1 \begin{pmatrix}
+                   (e_1,e_1) \\ (e_2,e_1) \\ \cdots \\ (e_n,e_1) \\
+                  \end{pmatrix} +
+         \alpha_2 \begin{pmatrix}
+                   (e_1,e_2) \\ (e_2,e_2) \\ \cdots \\ (e_n,e_2) \\
+                  \end{pmatrix} + .. +
+         \alpha_n \begin{pmatrix}
+                   (e_1,e_{j-1}) \\ (e_2,e_{j-1}) \\ \cdots \\ (e_n,e_{j-1})
+                  \end{pmatrix}$ - линейная комбинация $\Rightarrow$ ЛЗ $\Rightarrow G(e_1..e_n)=0$ 
+ \item $(*)$-ЛНЗ $\Rightarrow detG(e_1..e_n)>0$ ? \\
+       Существует ортонормированный базис $(e_1'..e_n')$ \\
+       $\underset  G()$
+\end{enumerate}
+
+
+
+
+
+        
+
