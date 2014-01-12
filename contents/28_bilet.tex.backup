@@ -71,13 +71,8 @@ $h_1 \to [h_1]_e,\ h_2\to [h_2]_e$ и $[h_1]_e = [h_2]_e \Rightarrow h_1 = h_2$
 
 $\forall h_1, h_2 \in E^*\ [h_1 + h_2]_e = [h_1]_e + [h_2]_e;\quad \forall \alpha \in P\ \forall h\in E^*\ [\alpha h]_e = \alpha [h]_e$
 
-$A(h) = [h]_e;\ A$-линейное и вз. однозн. $\Leftrightarrow$ биект. $\Rightarrow A$ - обр-мое $\Rightarrow A$ - изоморфизм. $E^*$ и $M_{1,n}(P)$
-
-Базисом $M_{1,n}(P)$ явл-ся $q_1=(1,0,\ldots,0),\ q_2=(0,1,\ldots,0),\ldots,\ q_n = (0,0,\ldots, 1) =\Rightarrow \mathrm{dim}\, M_{1,n} (P) = n \Rightarrow \mathrm{dim}\, E^* = n$
+$A(h) = [h]_e;\ A$-вз. однозн. $\Leftrightarrow$ биект.
 \end{enumerate}
-%end of th
-
-\textbf{Теорема 4} Если $E-n$-мерное лин. пр-во над полем $P$, то $(E^*)^*$ изоморфно $E$
 
 
  
