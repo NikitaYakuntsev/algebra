@@ -52,7 +52,7 @@
        
 \end{enumerate}
 
-\textbf{Теорема 1:} Любое евклидово пространство является нормарованным с нормой $\|x\| = \sqrt{(x,x)}$
+\textbf{Теорема 1} Любое евклидово пространство является нормарованным с нормой $\|x\| = \sqrt{(x,x)}$
 
 \textbf{Доказательство:} 
 
@@ -83,19 +83,5 @@ $\rho(x,y) = \|x-y\|$ - расстояние от $x$ до $y$
  \item $\forall x,y \in E ~ \rho(x,y) = \rho(y,x)$
  \item $\forall x,y,z \in E ~ \rho (x,z) \le \rho (x,y) + \rho (y,z)$
 \end{enumerate}
-
-\textbf{Теорема 2:} Любое евклидово пространство с нормой $\|x\|$ является метрическим пространством с метрикой $\rho(x,y) = \|x-y\|$
-
-\textbf{Доказательство}
-
-\begin{enumerate}
- \item \begin{enumerate}
-        \item $\rho(x,y) = \|x-y\| \ge 0$
-        \item $\rho(x,y) = 0 \Leftrightarrow \|x-y\| = 0 \Leftrightarrow x-y = 0 \Leftrightarrow x=y$
-       \end{enumerate}
- \item $\rho(x,y) = \|x-y\| = \|(-1)(y-x)\| = \left|-1\right\|\|y-x\| = \|y-x\| = \rho(y,x)$
- \item $\rho(x,z) = \|x-z\| = \| x-y + y-z\| \le \| x-y\| + \|y-z\| = \rho(x,y) + \rho(y,z)$
-\end{enumerate}
-
 
 
