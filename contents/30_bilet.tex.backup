@@ -108,7 +108,7 @@ $\Rightarrow \beta_1 = \ldots = \beta_p = 0 = \alpha_{k+1} = \ldots = \alpha_{k+
 
 \textbf{Доказательство:} %TODO
 
-\underline{Следствие:} $k(x)=b(x,x)$ - отриц. опр. $\Leftrightarrow \left\{ \begin{matrix} \Delta_1 < 0 \\ \Delta_2 > 0 \\ \cdots \\ \mathrm{sgn}\, \Delta_n = (-1)^n \end{matrix} \right.$
+\underline{Следствие:} $k(x)=b(x,x)$ - отриц. опр. $\Leftrightarrow \left\{ \begin{matrix} \Delta_1 < 0 \\ \Delta_2 > 0 \\ \cdots \\ \sgn \Delta_n = (-1)^n \end{matrix} \right.
                                                                                                                                                       
 
 
