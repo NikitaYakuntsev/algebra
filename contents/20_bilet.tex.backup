@@ -9,7 +9,7 @@
 Зафиксируем произвольные $x,y \in E$. Введем отображение:
 
 $$
-  \varphi(\lambda): R \to R; \forall \lambda ~ \varphi (\lambda) = (\lambda x + y,\lambda x + y)  
+  \varphi(\lambda): R \to R; \forall \lambda \varphi (\lambda) = (\lambda x + y,\lambda x + y)  
 $$
 
 $$
@@ -35,21 +35,8 @@ $$
 \begin{enumerate}
  \item $\Rightarrow x$ и $y$ - линейно зависимы $\Leftrightarrow$
 	$\left[\begin{matrix} 
-	                  \mbox{$x=0$} \\
-	                  \mbox{$y= \lambda x$}
+	                  \mbox{x=0} \\
+	                  \mbox{y= x}
 	                 \end{matrix}\right.$
-      
-      \begin{enumerate}
-       \item $x=0$
-       
-	     $(0,y) = 0; (0,0)*(y,y) = 0*(y,y) = 0 \Rightarrow (x,y)^2 = (x,x)*(y,y)$
-       \item $y=\lambda x$
-       
-	     $(x,y)^2 = (x,\lambda x)^2 = \lambda^2 (x,x)^2 = \lambda^2 (x,x)*(x,x) = (x,x)*(\lambda x,\lambda x) = (x,x)*(y,y)$
-      \end{enumerate}
- \item $\Leftarrow$ Пусть в неравенстве Коши-Буняковского достигается знак равенства. Объявим функцию $\varphi (\lambda) = (\lambda x + y,\lambda x + y) = \lambda^2(x,x) + 2\lambda(x,y) + (y,y)$ 
-       
-       $(x,y)^2 = (x,x)*(y,y) \Rightarrow \frac{D}{4} = (x,y)^2 - (x,x)*(y,y) = 0$
-       
-       $\exists \lambda_0: ~ \varphi(\lambda_0) = (\lambda_0 x + y,\lambda_0 x + y) = 0 \Rightarrow \lambda_0 x + y = 0 \Rightarrow y = - \lambda_0 x$ - линейно зависимы.
+
 \end{enumerate}
