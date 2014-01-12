@@ -20,16 +20,14 @@
   
   \begin{enumerate}
    \item \begin{description}
-          \item [а)] $(0,y)=0 \ \forall y \in E\ $
-          \item [b)] $(x,0)=0 \ \forall x \in E\ $
+          \item а) $(0,y)=0 \ \forall y \in E\ $
+          \item b) $(x,0)=0 \ \forall x \in E\ $
          \end{description}
          \textbf{Доказательство:} 
          a) $\stackrel {3 \  axiom}{\Rightarrow}$ при $\alpha = 0 \ (0x,y)=0(x,y)=(0,y)=0, \ \forall y \in E\ $
    \item \begin{description}
-          \item [a)] $\forall n \in \mathbb{N}\, \forall \alpha_1..\alpha_n \in \mathbb{R}\ \forall x_1..x_n,y \in E\ $ \\
-	  	$\left( \sum \limits_{i=1}^n {\alpha_i x_i,y} \right) = \sum \limits_{i=1}^{n} {\alpha_i \left( x_i,y \right)} $ \\
-	  	\textbf{Доказательство: } %\TODO
-	  \item [b)] 
+          \item a) $\forall n \in \mathbb{N}\, \forall \alpha_1..\alpha_n \in \mathbb{R}\ \forall x_1..x_n,y \in E\ $ \\
+		$\left( \sum \limits_{i=1}^n {\alpha_i x_i,y} \right) = \sum \limits_{i=1}^{n} {\alpha_i \left( x_i,y \right)} $
          \end{description}
       
          
