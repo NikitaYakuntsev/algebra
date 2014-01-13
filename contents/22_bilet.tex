@@ -15,7 +15,7 @@
 	$x \perp E \Leftrightarrow x=0 $
 \end{description} 
 \textbf{Теорема 1} \\
- Пусть $x \perp M \Leftrightarrow$ для любого базиса $(e_1,e_k)$ в $M,  x \perp e_i,  i=1..k,  \Leftrightarrow (x,e_i)=0, i=1..k $ \\
+ Пусть $x \perp M \Leftrightarrow$ для любого базиса $(e_1,..,e_k)$ в $M,  x \perp e_i,  i=1..k,  \Leftrightarrow (x,e_i)=0, i=1..k $ \\
 \textbf{Доказательство:} \\
 \begin{description}
  \item [$\Rightarrow :$] $x \perp M \Leftrightarrow \forall y \in M\, \ x \perp y, \ \Leftrightarrow (x,y)=0 \Rightarrow$ верно и для базисных 
@@ -29,7 +29,7 @@
 \begin{enumerate}
  \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется ортогональной, если $x_{\beta} \perp x_{\alpha} \ \forall \beta \ne \alpha$
  \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется нормированной, если $(x_{\alpha},x_{\alpha})=1, \ \forall \alpha$
- \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется ортонормированной, если $1) \cap 2)$
+ \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется ортонормированной, если $1) \cup 2)$
 \end{enumerate}
 \textbf{Теорема 2} \\
 Ортогональная система из ненулевых векторов линейно независимая \\
@@ -82,7 +82,7 @@ $L(e_1)=L(f_1), \ f_1=\alpha e_1 , \ \alpha = \frac{1}{\left| \left| e_1 \right|
 $(\alpha_1 f_1 + e_2,f_1)=0, \ \alpha_1(f_1,f_1)+(e_2,f_1)=0$, т.к. $(f_1,f_1)=1 \Rightarrow \alpha_1=-(e_2,f_1) \Rightarrow e_2'=-(e_2,f_1)f_1+e_2$ \\
 $f_2=\frac{f_2'}{\left| \left| e_2' \right| \right|}, \ e_2' \ne 0 ?$ \\
 \underline{Предположим противное} $e_2'=0, \ \alpha_1 f_1 + e_2 = 0 , \ f_1=\frac{e_1}{\left| \left| e_1 \right| \right|}$, но $e_1,e_2$-ЛНЗ \\
-3)Пусть для $m$ векторов построены $f_1,,f_m$ - удовл условию Т3 \\
+3)Пусть для $m$ векторов построены $f_1,..,f_m$ - удовл условию Т3 \\
 4)При m<n ищем вектор $f_{m+1}, \ e_{m+1}' = \alpha_1 e_1 + .. + \alpha_m f_m + e_{m+1}$, так чтобы $e_{m+1}'$ был ортогонален $f_i, \ i=1..m, \ 
 e_{m+1}' \perp f_i \Leftrightarrow (e_{m+1}',f_i)=0$ \\
 $(e_{m+1}',f_i)=0 \Leftrightarrow \alpha_1 \underset {=1} {(f_1,f_1)} + \alpha_2 \underset {=0} {(f_2,f_1)} + .. + \alpha_2 \underset {=0} {(f_m,f_1)} + \alpha_m \underset {=0} {(e_{m+1},f_1)}$ \\
