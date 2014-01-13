@@ -12,17 +12,57 @@ $A$-сс $\Leftrightarrow$ м-ца $[A]_e$ в любом базисе $e=(e_1,..
 
 \textbf{Теорема 2} Пусть $A$-сс лин. преобр. $E$-ортонорм. Тогда все собственные значения преобразования $A$ вещественны.
 
-\textbf{Доказательство:}
+\textbf{Доказательство:} $x \ne 0; Ax = \lambda x \Leftrightarrow (*) [A]_e [x]_e = \lambda[x]_e;\ \lambda$ - корни хар. ур-ния $\det\left( [A]_e - \lambda J \right),\quad \lambda \in \mathbb{C}$
 
+$\lambda \in \mathbb{R} ? $ Пусть $\lambda$ - произв. корень хар. ур-ния. $\exists [x]_e \ne \begin{pmatrix} 0 \\ \cdots \\ 0\end{pmatrix}$ удовл. $(*)$
+
+$[x]_e = \begin{pmatrix} \alpha_1 \\ \cdots \\ \alpha_n \end{pmatrix}, \alpha_k \in \mathbb{C}, k = \overline{1,n}\quad [A]_e = (a_{k,j})_{k,j = \overline{1,n}}$
+
+из $(*), k$-штук: $\quad  \left\{ \sum\limits_{j=1}^n a_{k,j} \alpha_j \right. = \lambda \alpha_k\ (**)\ k = \overline{1,n}$
+
+умножим на $\overline{\alpha_k}$ - сопр. к $\alpha_k$ и сложим
+
+$\sum\limits_{k=1}^n \overline{\alpha_k} \left( \sum\limits_{j=1}^n a_{k,j} \alpha_j \right) = \sum\limits_{k=1}^n \lambda \alpha_k \overline{\alpha_k}$
+
+$\underset{=z}{\sum\limits_{k=1}^n \sum\limits_{j=1}^n a_{k,j} \alpha_j \overline{\alpha_k}} = \lambda \underset{=\beta > 0}{\sum\limits_{k=1}^n\alpha_k \overline{\alpha_k}};\quad \exists m : \alpha_m \ne 0;\ \alpha_m \overline{\alpha_m} > 0$
+
+$\begin{pmatrix} \overline{\alpha_1} & \cdots & \overline{\alpha_n} \end{pmatrix} \begin{pmatrix} a_{1,1} & \cdots & a_{1,n} \\ \cdots & \ddots & \cdots \\ a_{n,1} & \cdots & a_{n,n} \end{pmatrix} \begin{pmatrix} \alpha_1 \\ \cdots \\ \alpha_n \end{pmatrix}
+ = \lambda \beta;\ \beta > 0$
+
+$a_{k,j} = a_{j,k}\ \forall k,j=\overline{1,n} \Leftrightarrow A $ cc в ортон. базисе
+
+$z = \overline{z} \overset{?} \Leftrightarrow z \in \mathbb{R}$
+
+$\overline{z} = \overline{\sum\limits_{k=1}^n \sum\limits_{j=1}^n a_{k,j} \alpha_j \overline{\alpha_k}} = \sum\limits_{k=1}^n \sum\limits_{j=1}^n \overline{a}_{k,j} \overline{\alpha}_j \overline{\overline{\alpha}}_k = 
+\sum\limits_{k=1}^n \sum\limits_{j=1}^n a_{k,j} \overline{\alpha}_j \alpha_k = \Bigl| k\to j;\ j \to k \Bigr| = \sum\limits_{j=1}^n \sum\limits_{k=1}^n a_{j,k} \alpha_k \overline{\alpha_j}=$\\
+$=\sum\limits_{k=1}^n \sum\limits_{j=1}^n a_{k,j} \alpha_j \overline{\alpha_k} = z$
+
+$\underset{\in \mathbb{R}} z = \lambda \underset{>0, \in \mathbb{R}} \beta \Rightarrow \lambda = \frac{z}{\beta} \in \mathbb{R}$
+
+\underline{Следствие}: собств. значения любой вещественной симметр. матрицы вещественны 
 
 \textbf{Теорема 3} Собственные векторы сс. лин. преобр., соотв. различным собств. значениям, ортогональны
 
-\textbf{Доказательство:}
+\textbf{Доказательство:} $A:E\to E$ сс лин. преобр. $E$
+
+$Ax = \lambda x |*y, x\ne 0;\quad Ay = \mu y |*x, y\ne 0;\quad \mu \ne \lambda$ - собств. знач.; $x \perp y ? [(x,y)=0]$
+
+$(Ax, y) = (\lambda x, y) = \lambda(x,y);\ (1)\quad (x, Ay) = (x, \mu y) = \mu (x,y);\ (2)$\\$  (Ax, y) = (x, A^*y) = (x,Ay)$, т.к. $A$ сс.
+
+$(1) - (2) \Rightarrow 0 = \underset{\ne 0}{(\lambda - \mu)}(x,y) =\Rightarrow (x,y)=0 \Rightarrow x\perp y$
+
+
 
 
 \textbf{Теорема 4} Если подпр. $F$ инвариантно отн. $A$-сс преобр., то ортогональное доп-ние $F^\perp$ также инвар-но отн. $A\ (AF\subset F;\ AF^\perp \subset F^\perp)\ F^\perp = \{ x : (x,y)=0\ \forall y \in F \}$
 
-\textbf{Доказательство:}
+\textbf{Доказательство:} $AF \subset F \Rightarrow \forall x\in F\ Ax \in F$
+
+$\forall y\in F^\perp\ Ay \in F^\perp \Leftrightarrow (x,Ay) = 0\ \forall x\in F\quad ??$
+
+$x \in F,\ y \in F^\perp:\quad (x, Ay) = (Ay, x) = (y, A^*x) = (y, Ax) = (\times); $
+
+$y\in F^\perp,\ Ax \in F,\ y\perp Ax \Rightarrow (\times) = 0 \Rightarrow (x,Ay) = 0\ \forall x \in F,\ \forall y \in F^\perp \Rightarrow Ay \in F^\perp$
 
 
 \textbf{Теорема 5 (основная)} Пусть $A$ - произв. сс. преобр. $E$
@@ -35,7 +75,48 @@ $\begin{pmatrix}
  \end{pmatrix}
 $;\quad $\lambda_k \in \mathbb{R};\ \lambda_k$ - собств. знач.
 
-\textbf{Доказательство: }
+\textbf{Доказательство: } Индукция по $n$
+\begin{enumerate}
+ \item $n = 1,\ \dim E = 1\quad \forall e_1 \ne 0\ e_1 \in E$ - базис.
 
-\textbf{Опр. 2}
+    $[Ax]_e = [A]_e [x]_e = a_{1,1}[x]_e = [a_{1,1}x]_e \Rightarrow Ax = a_{1,1}x;\ \lambda = a_{1,1}$ - собст.зн., т.к. $Ax = \lambda x\ $, $x\ne 0$
+
+    $\forall x \in E\ x\ne 0\ x-$собств. вектор, например $x=e_1$
+
+ \item Пусть утв. верно $\forall n < k$
+ \item Докажем при $n=k$
+
+    $Ax - \lambda x = 0;\ [A]_e [x]_e - \lambda J[x]_e = 0;\ \det([A]_e - \lambda J) = 0;\quad \exists \lambda \in \mathbb{R}$ корни хар. ур-ния
+    
+    Рассм. $E_\lambda = \{ x\in E : Ax = \lambda x\}$ - лин. подпр. в $E$ ( proof: сумма и умножение на число)
+    
+    \begin{enumerate}
+     \item $\dim E_\lambda = k;\ \dim E = k;\ \Rightarrow E_\lambda = E$
+      
+	$\exists e=(e_1,..,e_n) \in E_\lambda$ он базис;\ $Ae_i = \lambda e_i;\ i = \overline{1,k}$
+
+     \item $\dim E_\lambda < k; \ \dim E_\lambda > k.\ $ Пусть $\ 0 < \dim E_\lambda = m < k$, выберем в $E_\lambda$ он базис $e_1,..,e_m$
+
+	Возьмем $E^\perp_\lambda;\ E = E_\lambda \dotplus E_\lambda^\perp$
+
+	$AE_\lambda \in E_\lambda \Leftrightarrow$ инв. отн. $A ? \Leftrightarrow \forall x \in E_\lambda\ Ax \in E_\lambda ?$
+
+	$x \in E_\lambda \Leftrightarrow Ax = \lambda x (1);\ \lambda x \in E_\lambda (2);\quad (1)(2)\Rightarrow Ax \in E_\lambda$
+
+	из $T.4 E_\lambda^\perp$ инвар. отн. $A;\quad A$ - сс $\Rightarrow (Ax,y) = (x,Ay)\ \forall x,y \in E$ верно в $E_\lambda$
+
+	$A$ сс в $E_\lambda$ и в $E_\lambda^\perp;\quad \underset{k}{\dim E} = \underset{m}{\dim E_\lambda} + \underset{k-m < k}{E_\lambda^\perp}$
+
+	$\Rightarrow$ по предп. индукции в $E_\lambda^\perp\ \exists$ он базис $f_1,..,f_{k-m}$ из собств. векторов $A$ (1)
+
+	В $E_\lambda\ \exists e_1,..,e_m$ он базис из собств. векторов $Ae_i = \lambda e_i,\ i=\overline{1,m} $ (2)
+    
+	(1)(2)$\Rightarrow (e_1,..,e_m \cup f_1,..,f_{k-m})$ - базис в $E$ из собств. векторов, $e_i \perp f_j \Rightarrow$ базис ортон.
+    \end{enumerate}
+
+\end{enumerate}
+
+
+\textbf{Опр. 2} $n\times n$ матрица $Q$ наз-ся ортогон., еслп $Q'Q = J \Leftrightarrow Q^{-1} = Q'$
+
 \textbf{Следствие из Т5} $\forall \mathcal{A}_{m\times n} \in M(\mathbb{R})$ - симм. $\exists Q_{n\times n}$ - ортогон: $(Q'\mathcal{A}Q)$ явл. диагональной матрицей.
