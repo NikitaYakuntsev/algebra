@@ -28,7 +28,7 @@
 \textbf{Def2: } 
 \begin{enumerate}
  \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется ортогональной, если $x_{\beta} \perp x_{\alpha} \ \forall \beta \ne \alpha$
- \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется нормированной, если $(x_{\alpha},x_{\alpha}=1, \ \forall \alpha)$
+ \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется нормированной, если $(x_{\alpha},x_{\alpha})=1, \ \forall \alpha$
  \item Система векторов $\{x_{\alpha}\}$ из евклидового простраства называется ортонормированной, если $1) \cap 2)$
 \end{enumerate}
 \textbf{Теорема 2} \\
@@ -38,13 +38,13 @@ $\{ x_{\alpha} \}$ - ортогональная система. Докажем, 
 Рассмотрим линейную комбинацию $\sum \limits_{i=1}^k {\beta_i x_{\alpha_i}}=0; \ \beta_i=0-? \ i=1..k$ \\
 Скалярно умножим $\sum \limits_{i=1}^k {\beta_i x_{\alpha_i}}=0$ на вектор $x_{\alpha_j} \ \forall j=1..k$ \\
 $\left( \sum \limits_{i=1}^k {\beta_i x_{\alpha_i}},x_{\alpha_j} \right)  =(0,x_{\alpha_j}) = 0$ \\
-$\sum \limits_{i=1}^k {\beta_i (x_{\alpha_i}),x_{\alpha_j})} = 0 \Rightarrow \beta_j (x_{\alpha_j}) = 0 $ \\ 
-$x_{\alpha_j} = $
+$\sum \limits_{i=1}^k {\beta_i (x_{\alpha_i},x_{\alpha_j})} = 0$ \\ 
+$(x_{\alpha_i},x_{\alpha_j}) = $
 $\left\{ \begin{matrix}
 \mbox{$0, \ i \ne j $} \\
-\mbox{$(x_{\alpha_j},x_{\alpha_j}), \ i=j$}
+\mbox{$(x_{\alpha_j},x_{\alpha_j})\ne 0, \ i=j$}
 \end{matrix}\right.$
-$(x_{\alpha_j},x_{\alpha_j}) \ne 0 \Rightarrow \beta_j = 0 \Rightarrow$ все $\beta_j=0, \ j=1..k \Rightarrow$ система ЛНЗ \\
+$\Rightarrow \beta_i = 0 \Rightarrow$ все $\beta_i=0, \ i=1..k \Rightarrow$ система ЛНЗ \\
 \textbf{Теорема 3(Метод Фурье)} \\
 Пусть $e_1..e_n$ ортогональная система из ненулевых векторов и $x=\sum \limits_{i=1}^n {\alpha_i e_i} (*) $ \\
 Тогда $\alpha_i= \frac{(x,e_i)}{e_i,e_i}, \ i=1..n$\\
