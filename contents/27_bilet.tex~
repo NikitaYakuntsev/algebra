@@ -1,0 +1,118 @@
+\subsection{Билет 26}
+
+\textit{Сопряжённое преобразование.}
+
+Дано евклидово пространство $E$, линейное преобразование $A:E \to E$. $A^*:E \to E$ называют сопряжённым к нему, если $\forall x,y \in E ~ (A(x),y) = (x,A^*(y))$
+
+\textbf{Теорема 1:} Дано евклидово пространство $E$, линейное преобразование $A:E \to E$. Для этого преобразования существует не более одного сопряженного оператора, и, если он существует, он линейный.
+
+\textbf{Доказательство:} Предположим противное, существует 2 сопряженных оператора:
+
+$$
+  (A(x),y) = (x,B(y)), ~ (A(x),y) = (x,C(y))
+$$
+
+$$
+  0 = (x,B(y)) - (x,C(y)) = (x,B(y)-C(y)) \Leftrightarrow B(y)-C(y) = 0 \Leftrightarrow B(y) = C(y)
+$$
+
+Теперь докажем, что что опряженный оператор  - линейный.
+
+\begin{enumerate}
+ \item $\forall y,z \in E ~ A^*(y+z) = A^*(y) +A^*(z)$?
+ 
+       $(x,A^*(y+z)) = (A(x),y+z) = (A(x),y) + (A(x),z) = (x,A^*(y)) + (x,A^*(z)) = (x,A^*(y)+A^*(z))$
+ \item $\forall y \in E ~ \forall \alpha \in R ~ A^*(\alpha y) = \alpha A^*(y)$
+ 
+       $(x,A^*(\alpha y)) = (A(x),\alpha y) = \alpha (A(x),y) = \alpha (x,A^*(y)) = (x,\alpha A^*(y))$
+\end{enumerate}
+
+\textbf{Теорема 2:} (Свойства сопряженного оператора)
+
+\begin{enumerate}
+ \item $I^* = I$
+ \item $(A^*)^* = A$
+ \item $(A+B)^* = A^*+B^*$
+ \item $(\alpha A)^* = \alpha A^*$
+ \item $(AB)^* = B^*A^*$
+\end{enumerate}
+
+\textbf{Доказательство:}
+
+\begin{enumerate}
+ \item $(I(x),y) = (x,y) = (x,I(y)) \Rightarrow I^* = I$
+ \item $(A^*(y),x) = (x,A^*(y)) = (A(x),y) = (y,A(x)) \Rightarrow (A^*)^* = A$
+ \item $(x,(A+B)^*(y)) = ((A+B)(x),y) = (A(x)+B(x),y) = (A(x),y)+(B(x),y) = (x,A^*(y)) + (x,B^*(y)) = (x,A^*(y)+B^*(y)) \Rightarrow (A+B)^* = A^*+B^*$
+ \item $(x,(\alpha A)^*(y)) = ((\alpha A)(x),y) = (\alpha A(x),y) = \alpha (A(x),y) = \alpha (x,A^*(y)) = (x,\alpha A^*(y)) \Rightarrow (\alpha A)^* = \alpha A^*$
+ \item $(x,(AB)^*(y)) = ((AB)(x),y) = (B(A(x)),y) = (A(x),B^*(y)) = (x,A^*(B^*(y))) = $ 
+ 
+ $ = (x,(B^*A^*)(y) \Rightarrow (AB)^* = B^*A^*$
+\end{enumerate}
+
+\textbf{Теорема 3:} $A:E \to E$ - линейное преобразование евклидового n-мерного пространства $E. (e_1,\ldots.e_n)$ - произвольный базис линейного пространства. 
+
+Тогда, существует сопряженный оператор, и его матрица имеет вид:
+
+$$
+  \left[A^*\right]_e = G^{-1}(e_1,\ldots,e_n) \left[A\right]^T_e G(e_1,\ldots,e_n)
+$$
+
+Если базис ортонормированный, то формула принимает вид:
+
+$$
+  \left[A^*\right]_e = \left[A\right]^T_e
+$$
+
+\textbf{Доказательство:}
+
+Определим оператор $B(y)$, возьмем ортонормированный базис из $E$ и покажем, что оператор является сопряжённым:
+
+$$
+  B(y) = \sum_{i=1}^n (y,A(e_i))e_i
+$$
+
+$$
+  (A(x),y) = (A(\sum_{i=1}^n \lambda_i e_i),y) = (\sum_{i=1}^n \lambda_i A(e_i),y) = \sum_{i=1}^n \lambda_i (A(e_i),y)
+$$
+
+$$
+  (x,B(y)) = (\sum_{i=1}^n \lambda_i e_i, \sum_{j=1}^n (y,A(e_j))e_j) = \sum_{i=1}^n \sum_{j=1}^n \lambda_i (y,A(e_j)) (e_i,e_j)
+$$
+
+$$
+  (e_i,e_j) = 0, i \neq j
+$$
+
+$$
+  \sum_{i=1}^n \sum_{j=1}^n \lambda_i (y,A(e_j)) (e_i,e_j) = \sum_{i=1}^n \lambda_i (y,A(e_i)) = \sum_{i=1}^n \lambda_i (A(e_i),y)
+$$
+
+Теперь возьмем произвольный базис из $E$ и найдем матрицу сопряженного оператора:
+
+$$
+  (A(x),y) = \left[A(x)\right]^T_e G(e) \left[y\right]_e = (\left[A\right]_e \left[x\right]_e)^T G(e) \left[y\right]_e = \left[x\right]_e^T \left[A\right]_e^T G(e) \left[y\right]_e 
+$$
+
+$$
+  (x,A^*(y)) = \left[x\right]^T_e G(e)\left[A^*(y)\right]_e = \left[x\right]^T_e G(e)\left[A^*\right]_e\left[y\right]_e
+$$
+
+$$
+  \left[x\right]_e^T \left[A\right]_e^T G(e) \left[y\right]_e = \left[x\right]^T_e G(e)\left[A^*\right]_e\left[y\right]_e
+$$
+
+$$
+  \left[A\right]_e^T G(e) = G(e)\left[A^*\right]_e
+$$
+
+Векторы $e$ - это базис, а значит - линейно не зависимы, следовательно определитель матрицы Грама не равен нулю, а следовательно существует обратная матрица. Домножим на неё слева:
+
+$$
+  G^{-1}(e)\left[A\right]_e^T G(e) = \left[A^*\right]_e
+$$
+
+Если же базис - ортонормированный, тогда матрица Грама равна единичной матрице, и формула имеет вид:
+
+$$
+  \left[A\right]_e^T = \left[A^*\right]_e
+$$ 
