@@ -34,8 +34,3 @@ $\begin{pmatrix}
   \mathcal{O} & \cdots & \lambda_n
  \end{pmatrix}
 $;\quad $\lambda_k \in \mathbb{R};\ \lambda_k$ - собств. знач.
-
-\textbf{Доказательство: }
-
-\textbf{Опр. 2}
-\textbf{Следствие из Т5} $\forall \mathcal{A}_{m\times n} \in M(\mathbb{R})$
